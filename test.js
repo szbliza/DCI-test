@@ -7,9 +7,8 @@ async function shoppingCartTest() {
     try{
 
         await driver.get("https://tst.datatronic.cloud")
-
-        let shopLink = await driver.findElement(By.xpath('//*[@id="root"]/div/header/div[1]/div/nav/a[1]'))
-
+        
+        let shopLink = await driver.wait(until.elementLocated(By.xpath('//*[@id="root"]/div/header/div[1]/div/nav/a[1]')))
         await shopLink.click()
 
     }catch(error){
