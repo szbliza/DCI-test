@@ -15,8 +15,11 @@ async function shoppingCartTest() {
         await services.click()
 
         let cartButton = await driver.wait(until.elementLocated(By.xpath('//*[@id="calendlyRoot"]/div[1]/div[1]/div[3]/button[2]')))
+
+        await driver.executeScript('window.scrollBy(0,900)')
+
         await cartButton.click()
-        
+
 
 
 
